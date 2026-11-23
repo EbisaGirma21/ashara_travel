@@ -51,12 +51,13 @@ export function Footer() {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block">
-              <span className="font-serif text-2xl font-bold tracking-tight">
-                Ashara<span className="text-secondary">.</span>
-              </span>
-              <span className="ml-2 text-xs font-light uppercase tracking-widest text-primary-foreground/70">
-                Travels
-              </span>
+              <Image
+                src="/images/logo.png"
+                alt="Ashara Travels"
+                width={308}
+                height={99}
+                className="h-[106px] w-auto"
+              />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-primary-foreground/70">
               Your Gateway to the World, Based in the Heart of Africa. We curate
@@ -68,25 +69,25 @@ export function Footer() {
               <div className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-secondary" />
                 <span className="text-sm text-primary-foreground/70">
-                  Bole Road, Addis Ababa, Ethiopia
+                  Addis Ababa, Bole Sub City, Woreda 13 BMA Building 13 floor.
                 </span>
               </div>
               <div className="flex items-start gap-3">
                 <Mail className="mt-0.5 h-4 w-4 flex-shrink-0 text-secondary" />
                 <a
-                  href="mailto:info@asharatravels.com"
+                  href="mailto:travels@asharabusiness.com"
                   className="text-sm text-primary-foreground/70 transition-colors hover:text-secondary"
                 >
-                  info@asharatravels.com
+                  travels@asharabusiness.com
                 </a>
               </div>
               <div className="flex items-start gap-3">
                 <Phone className="mt-0.5 h-4 w-4 flex-shrink-0 text-secondary" />
                 <a
-                  href="tel:+251911000000"
+                  href="tel:+251963071000"
                   className="text-sm text-primary-foreground/70 transition-colors hover:text-secondary"
                 >
-                  +251 911 000 000
+                  +251 96 307 1000
                 </a>
               </div>
               <div className="flex items-start gap-3">

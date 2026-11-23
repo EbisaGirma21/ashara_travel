@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -57,14 +58,16 @@ export function Navbar() {
               className="flex items-center gap-1.5 hover:text-secondary transition-colors"
             >
               <Phone className="h-3 w-3" />
-              <span className="hidden sm:inline">+251 911 000 000</span>
+              <span className="hidden sm:inline">+251 96 307 1000</span>
             </a>
             <a
-              href="mailto:info@asharatravels.com"
+              href="mailto:travels@asharabusiness.com"
               className="flex items-center gap-1.5 hover:text-secondary transition-colors"
             >
               <Mail className="h-3 w-3" />
-              <span className="hidden sm:inline">info@asharatravels.com</span>
+              <span className="hidden sm:inline">
+                travels@asharabusiness.com
+              </span>
             </a>
           </div>
           <div className="text-xs text-primary-foreground/70">
@@ -77,12 +80,13 @@ export function Navbar() {
       <div className="bg-primary/95 backdrop-blur-sm">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-8">
           <Link href="/" className="flex items-center gap-2">
-            <span className="font-serif text-2xl font-bold tracking-tight text-primary-foreground">
-              Ashara<span className="text-secondary">.</span>
-            </span>
-            <span className="hidden text-xs font-light uppercase tracking-widest text-primary-foreground/70 sm:block">
-              Travels
-            </span>
+            <Image
+              src="/images/logo.png"
+              alt="Ashara Travels"
+              width={250}
+              height={80}
+              className="h-auto w-36 "
+            />
           </Link>
 
           <nav className="hidden items-center gap-1 lg:flex">

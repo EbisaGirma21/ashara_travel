@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import React from "react"
+import React from "react";
 
-import { Navbar } from "@/components/navbar"
-import { Footer } from "@/components/footer"
-import Image from "next/image"
-import { MapPin, Mail, Phone, Clock, Send } from "lucide-react"
-import { useState } from "react"
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
+import Image from "next/image";
+import { MapPin, Mail, Phone, Clock, Send } from "lucide-react";
+import { useState } from "react";
 
 const contactInfo = [
   {
@@ -18,14 +18,14 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    detail: "info@asharatravels.com",
+    detail: "travels@asharabusiness.com",
     sub: "We reply within 24 hours",
-    href: "mailto:info@asharatravels.com",
+    href: "mailto:travels@asharabusiness.com",
   },
   {
     icon: Phone,
     title: "Call Us",
-    detail: "+251 911 000 000",
+    detail: "+251 96 307 1000",
     sub: "Mon - Sat, 9AM - 6PM EAT",
     href: "tel:+251911000000",
   },
@@ -35,14 +35,14 @@ const contactInfo = [
     detail: "Mon - Sat: 9AM - 6PM",
     sub: "East Africa Time (EAT)",
   },
-]
+];
 
 export default function ContactPage() {
-  const [submitted, setSubmitted] = useState(false)
+  const [submitted, setSubmitted] = useState(false);
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault()
-    setSubmitted(true)
+    e.preventDefault();
+    setSubmitted(true);
   }
 
   return (
@@ -68,8 +68,8 @@ export default function ContactPage() {
             Ready to Explore?
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-primary-foreground/80">
-            Contact Ashara Travels today and let us turn your travel
-            dreams into reality.
+            Contact Ashara Travels today and let us turn your travel dreams into
+            reality.
           </p>
         </div>
       </section>
@@ -79,10 +79,8 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {contactInfo.map((info) => {
-              const Wrapper = info.href ? "a" : "div"
-              const wrapperProps = info.href
-                ? { href: info.href }
-                : {}
+              const Wrapper = info.href ? "a" : "div";
+              const wrapperProps = info.href ? { href: info.href } : {};
               return (
                 <Wrapper
                   key={info.title}
@@ -102,7 +100,7 @@ export default function ContactPage() {
                     {info.sub}
                   </p>
                 </Wrapper>
-              )
+              );
             })}
           </div>
         </div>
@@ -117,14 +115,12 @@ export default function ContactPage() {
                 Get In Touch
               </p>
               <h2 className="mt-3 font-serif text-3xl font-bold text-primary md:text-4xl">
-                <span className="text-balance">
-                  Send Us a Message
-                </span>
+                <span className="text-balance">Send Us a Message</span>
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
                 Whether you have a question about our destinations, need a
-                custom itinerary, or want to book a corporate trip, our
-                team is here to help.
+                custom itinerary, or want to book a corporate trip, our team is
+                here to help.
               </p>
 
               <div className="mt-10 rounded-xl overflow-hidden h-64 lg:h-80 relative">
@@ -148,8 +144,8 @@ export default function ContactPage() {
                     Message Sent!
                   </h3>
                   <p className="mt-3 text-muted-foreground">
-                    Thank you for reaching out. We will get back to you
-                    within 24 hours.
+                    Thank you for reaching out. We will get back to you within
+                    24 hours.
                   </p>
                   <button
                     type="button"
@@ -221,7 +217,7 @@ export default function ContactPage() {
                       type="tel"
                       id="phone"
                       className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-secondary focus:outline-none focus:ring-1 focus:ring-secondary"
-                      placeholder="+251 911 000 000"
+                      placeholder="+251 91 122 3344"
                     />
                   </div>
 
@@ -278,5 +274,5 @@ export default function ContactPage() {
 
       <Footer />
     </main>
-  )
+  );
 }
